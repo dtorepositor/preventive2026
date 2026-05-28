@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Do not expose dotfiles such as .env when the full Laravel project sits in htdocs.
+    RewriteRule (^|/)\. - [F,L]
+
+    # Serve public assets from the public directory.
+    RewriteRule ^(.+\.(?:css|js|map|png|jpe?g|gif|svg|ico|webp|woff2?|ttf|eot|txt|json|pdf))$ public/$1 [L,NC]
+
+    # Send application routes directly to Laravel without exposing /public in the URL.
+    RewriteRule ^(.*)$ public/index.php [L]
+</IfModule>
