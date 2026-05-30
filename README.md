@@ -35,6 +35,18 @@ It is intended for local or internal deployment, such as inside the XAMPP `htdoc
 
 The system may support different role-based users depending on the configured database seeders and user management module.
 
+## Default Login Accounts
+
+After running the database seeders, the following default users are available:
+
+| Role | Username / Email | Password |
+| --- | --- | --- |
+| Super Admin | `superadmin@example.com` | `Password123!` |
+| Admin | `admin@example.com` | `Password123!` |
+| Encoder | `encoder@example.com` | `Password123!` |
+
+For local or internal deployment, change these default passwords after first login.
+
 ### Admin
 
 Admins usually have full access to the system. They can manage users, offices or colleges, departments, checklist items, preventive maintenance records, reports, archives, and system settings.
